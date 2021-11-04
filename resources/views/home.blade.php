@@ -8,12 +8,12 @@
         @forelse ($travels as $travel)
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">{{ $travel->title}}</h4>
-                    <h6 class="card-subtitle">{{ $travel->original_title }}</h5>
+                    <h4 class="card-title">{{ $travel->where}}</h4>
+                    <h6 class="card-subtitle">{{ $travel->when }}</h5>
                     <div class="card-text">
-                        <p>{{ $travel->nationality}}</p>
+                        <p>{{ $travel->days}}</p>
                     
-                        <pre>{{ $travel->vote}}</pre>
+                        <pre>{{ $travel->price}}</pre>
                     </div>    
                 </div>
             </div>
