@@ -13,8 +13,13 @@ class CreateHomeTable extends Migration
      */
     public function up()
     {
-        Schema::create('home', function (Blueprint $table) {
+        Schema::create('travels', function (Blueprint $table) {
             $table->id();
+            $table->string('where', 50);
+            $table->date('when');
+            $table->smallInteger('days');
+            $table->boolean('need_passport')->default(0);
+            $table->float('price', 8, 2);
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateHomeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home');
+        Schema::dropIfExists('travels');
     }
 }
